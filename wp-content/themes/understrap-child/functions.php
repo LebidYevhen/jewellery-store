@@ -115,8 +115,11 @@ function wpgood_nav_search( $items, $args ) {
 	if ( ! ( $args->theme_location == 'primary' ) ) {
 		return $items;
 	}
+
+  $search_form_element = '<li class="menu-item search-form-element">' . get_search_form( false ) . '</li>';
+  $search_form_trigger = sprintf('<li class="menu-item search-form-trigger"><a href="javascript:void(0);"><img src="%s" alt="Search Icon"></a></li>', get_stylesheet_directory_uri() . '/images/search.svg');
 	// Otherwise, add search form.
-	$items .= '<li class="menu-item search-form-trigger">' . get_search_form( false ) . '</li>';
+	$items .= $search_form_element . $search_form_trigger;
 	$items .= do_shortcode( '[woo_cart_but]' ); // Adding the created Icon via the shortcode already created.
 
 	return $items;
@@ -237,94 +240,3 @@ function register_custom_widget_area() {
 	);
 }
 add_action( 'widgets_init', 'register_custom_widget_area' );
-
-
-// Mega menu
-
-// Add a custom field to menu item
-function add_menu_item_checkbox_field( $item_id, $item ) {
-	?>
-  <p class="field-checkbox description description-wide">
-    <label>
-      <input type="checkbox" class="menu-item-checkbox" name="menu-item-checkbox[<?php echo esc_attr( $item_id ); ?>]"
-             value="1" <?php checked( '1', get_post_meta( $item_id, '_menu_item_checkbox', true ) ); ?> />
-      Is mega menu
-    </label>
-  </p>
-	<?php
-}
-
-add_action( 'wp_nav_menu_item_custom_fields', 'add_menu_item_checkbox_field', 10, 2 );
-
-// Save the custom field data
-function save_menu_item_checkbox_field( $menu_id, $menu_item_db_id, $menu_item_args ) {
-	if ( isset( $_POST['menu-item-checkbox'][ $menu_item_db_id ] ) ) {
-		update_post_meta( $menu_item_db_id, '_menu_item_checkbox', '1' );
-	} else {
-		delete_post_meta( $menu_item_db_id, '_menu_item_checkbox' );
-	}
-}
-
-add_action( 'wp_update_nav_menu_item', 'save_menu_item_checkbox_field', 10, 3 );
-
-
-// Display the checkbox in the menu item
-function display_menu_item_checkbox( $item_output, $item ) {
-	if ( '1' == get_post_meta( $item->ID, '_menu_item_checkbox', true ) ) {
-		$item_output = '<label><input type="checkbox" checked> ' . $item_output . '</label>';
-	}
-
-	return $item_output;
-}
-
-// add_filter( 'walker_nav_menu_start_el', 'display_menu_item_checkbox', 10, 2 );
-
-
-// Mega menu menu selection
-// Add a custom field for selecting a menu
-function add_menu_item_select_field( $item_id, $item ) {
-	$menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
-	?>
-  <p class="field-select description description-wide">
-    <label for="menu-item-select-<?php echo esc_attr( $item_id ); ?>">Select Menu:</label>
-    <select id="menu-item-select-<?php echo esc_attr( $item_id ); ?>"
-            name="menu-item-select[<?php echo esc_attr( $item_id ); ?>]">
-      <option value="">Select a menu</option>
-		<?php foreach ( $menus as $menu ) : ?>
-          <option value="<?php echo esc_attr( $menu->term_id ); ?>" <?php selected( $menu->term_id, get_post_meta( $item_id, '_menu_item_select', true ) ); ?>><?php echo esc_html( $menu->name ); ?></option>
-		<?php endforeach; ?>
-    </select>
-  </p>
-	<?php
-}
-
-add_action( 'wp_nav_menu_item_custom_fields', 'add_menu_item_select_field', 10, 2 );
-
-// Save the custom field data
-function save_menu_item_select_field( $menu_id, $menu_item_db_id, $menu_item_args ) {
-	if ( isset( $_POST['menu-item-select'][ $menu_item_db_id ] ) ) {
-		update_post_meta( $menu_item_db_id, '_menu_item_select', (int) $_POST['menu-item-select'][ $menu_item_db_id ] );
-	} else {
-		delete_post_meta( $menu_item_db_id, '_menu_item_select' );
-	}
-}
-
-add_action( 'wp_update_nav_menu_item', 'save_menu_item_select_field', 10, 3 );
-
-// Display the selected menu in the menu item
-function display_menu_item_select( $item_output, $item ) {
-	$selected_menu_id = get_post_meta( $item->ID, '_menu_item_select', true );
-	if ( $selected_menu_id ) {
-		$menu_args     = array(
-			'menu'            => $selected_menu_id,
-			'container'       => 'div',
-			'container_class' => 'menu-container',
-		);
-		$selected_menu = wp_nav_menu( $menu_args );
-		$item_output   = $selected_menu . $item_output;
-	}
-
-	return $item_output;
-}
-
-// add_filter( 'walker_nav_menu_start_el', 'display_menu_item_select', 10, 2 );

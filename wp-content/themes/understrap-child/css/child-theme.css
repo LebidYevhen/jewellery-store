@@ -15406,87 +15406,6 @@ body {
   margin-left: 0.58em;
 }
 
-#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator:after {
-  content: "\f347";
-  vertical-align: baseline;
-}
-
-#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator {
-  font-size: 8px;
-  margin-left: 8px;
-}
-
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link,
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link,
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link,
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
-  display: flex;
-  align-items: center;
-  background: inherit;
-  color: #ffffff;
-  font-family: "Marcellus", serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  text-transform: uppercase;
-  padding: 0 17px 0 17px;
-}
-
-@media only screen and (min-width: 769px) {
-  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover,
-  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
-    background: inherit;
-    border-bottom: 1px solid #C3935B;
-  }
-}
-#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item > ul.mega-sub-menu {
-  top: 62px;
-}
-
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item .mega-block-title.h4,
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title,
-#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item .mega-block-title.h4 {
-  color: #000000;
-  font-family: "Marcellus", serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  padding: 0;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
-  padding: 30px;
-}
-
-.mega-menu-item ul {
-  padding: 0;
-  list-style: none;
-}
-
-.mega-menu-item ul li.menu-item {
-  margin-bottom: 1rem;
-  line-height: 1rem;
-}
-
-.mega-menu-item ul li.menu-item:last-child {
-  margin-bottom: 0;
-}
-
-.mega-menu-item ul li.menu-item a {
-  font-size: 0.875rem;
-  line-height: 1rem;
-  color: #808080;
-  text-decoration: none;
-  transition: all 0.25s linear;
-}
-
-.mega-menu-item ul li.menu-item a:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
 .links-wrapper {
   display: flex;
   gap: 15px;
@@ -15516,19 +15435,24 @@ body {
 header .navbar {
   padding: 1rem 0;
 }
+header .navbar .navbar-container {
+  position: relative;
+}
 header .navbar.bg-primary {
   background-color: #040404 !important;
 }
 header .navbar .navbar-brand {
   margin-right: 5.6875rem;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary {
-  background: #040404;
+header .navbar .navbar-collapse {
+  justify-content: flex-end;
+}
+header .navbar .navbar-collapse .navbar-nav {
   display: flex;
   align-items: center;
+  gap: 17px;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .li.mega-menu-item.mega-current-menu-item > a.mega-menu-link {
-  background: inherit;
+header .navbar .navbar-collapse .navbar-nav .menu-item .nav-link {
   color: #ffffff;
   font-family: "Marcellus", serif;
   font-weight: 400;
@@ -15536,23 +15460,27 @@ header .navbar #mega-menu-wrap-primary #mega-menu-primary .li.mega-menu-item.meg
   line-height: 1rem;
   text-transform: uppercase;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .li.mega-menu-item.mega-current-menu-item > a.mega-menu-link.mega-toggle-on span {
+header .navbar .navbar-collapse .navbar-nav .menu-item .nav-link span {
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s linear;
+}
+header .navbar .navbar-collapse .navbar-nav .menu-item .nav-link.show span {
   border-bottom: 1px solid #C3935B;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .li.mega-menu-item.mega-current-menu-item > a.mega-menu-link .mega-toggle-on:hover {
+header .navbar .navbar-collapse .navbar-nav .menu-item .nav-link:hover span {
   border-bottom: 1px solid #C3935B;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .menu-item.cart-contents {
+header .navbar .navbar-collapse .navbar-nav .menu-item.cart-contents {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #ffffff;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .menu-item.cart-contents .cart-contents-count-wrapper {
+header .navbar .navbar-collapse .navbar-nav .menu-item.cart-contents .cart-contents-count-wrapper {
   position: relative;
   margin-right: 7px;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .menu-item.cart-contents .cart-contents-count-wrapper .cart-contents-count {
+header .navbar .navbar-collapse .navbar-nav .menu-item.cart-contents .cart-contents-count-wrapper .cart-contents-count {
   position: absolute;
   top: -2px;
   right: -5px;
@@ -15566,13 +15494,19 @@ header .navbar #mega-menu-wrap-primary #mega-menu-primary .menu-item.cart-conten
   align-items: center;
   justify-content: center;
 }
-header .navbar #mega-menu-wrap-primary #mega-menu-primary .menu-item.cart-contents .cart-contents-total-amount {
+header .navbar .navbar-collapse .navbar-nav .menu-item.cart-contents .cart-contents-total-amount {
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1rem;
 }
-
+header .navbar .navbar-collapse .navbar-nav .menu-item.search-form-element {
+  position: absolute;
+  display: none;
+}
+header .navbar .navbar-collapse .navbar-nav .menu-item.search-form-element.search-active {
+  display: block;
+}
 #wrapper-footer {
   padding: 60px 0 70px 0;
   background: #EAEAEA;

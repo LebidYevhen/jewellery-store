@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</h2>
 
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="<?php echo esc_attr( $container ); ?> navbar-container">
 
 		<!-- Your site branding in the menu -->
 		<?php get_template_part( 'global-templates/navbar-branding' ); ?>

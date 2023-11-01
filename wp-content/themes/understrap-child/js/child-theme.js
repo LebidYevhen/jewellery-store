@@ -6763,6 +6763,15 @@
 	    $("#video").attr('src', $videoSrc);
 	  });
 
+	  // Search form
+	  $('.search-form-trigger').on('click', function (e) {
+	    e.preventDefault();
+	    var searchFormElement = $('.search-form-element');
+	    var navbarNavDropdown = $('#navbarNavDropdown');
+	    searchFormElement.toggleClass('search-active');
+	    navbarNavDropdown.toggleClass('search-active');
+	  });
+
 	  // document ready
 	});
 
