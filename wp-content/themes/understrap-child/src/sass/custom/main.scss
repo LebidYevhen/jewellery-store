@@ -1,0 +1,26 @@
+// Misc
+@import 'misc/variables';
+@import 'misc/mixins';
+@import 'misc/modifications';
+
+// Elements
+@import 'elements/button.scss';
+@import 'elements/title.scss';
+@import 'elements/suptitle.scss';
+@import "elements/description";
+@import "elements/header";
+@import "elements/footer";
+@import 'elements/modal-btn';
+@import 'elements/contact-info-widget-area';
+@import 'elements/recent-posts-widget-area';
+@import 'elements/our-stories-widget-area';
+@import 'elements/useful-links-widget-area';
+
+// Sections
+@import 'sections/hero-homepage.scss';
+@import 'sections/image-with-text-centered.scss';
+@import 'sections/featured-products';
+@import 'sections/image-with-text-left';
+@import 'sections/discount';
+@import 'sections/special-offer';
+@import 'sections/jewelry-design-blog';

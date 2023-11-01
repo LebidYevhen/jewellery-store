@@ -1,0 +1,57 @@
+2023-11-01T13:19:39+00:00 CRITICAL syntax error, unexpected token ";", expecting ")" in /var/www/html/wp-content/themes/understrap-child/template-parts/special_offer.php on line 23
+
+2023-11-01T13:31:01+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_price_to_display(), 0 passed in /var/www/html/wp-content/themes/understrap-child/template-parts/special_offer.php on line 50 and at least 1 expected in /var/www/html/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1121
+Stack trace:
+#0 /var/www/html/wp-content/themes/understrap-child/template-parts/special_offer.php(50): wc_get_price_to_display()
+#1 /var/www/html/wp-includes/template.php(787): require('/var/www/html/w...')
+#2 /var/www/html/wp-includes/template.php(720): load_template('/var/www/html/w...', false, Array)
+#3 /var/www/html/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /var/www/html/wp-content/themes/understrap-child/functions.php(169): get_template_part('template-parts/...')
+#5 /var/www/html/wp-content/themes/understrap-child/front-page.php(22): get_flexible_content()
+#6 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#7 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#8 /var/www/html/index.php(17): require('/var/www/html/w...')
+#9 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1121
+
+2023-11-01T13:31:13+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on int in /var/www/html/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1126
+Stack trace:
+#0 /var/www/html/wp-content/themes/understrap-child/template-parts/special_offer.php(50): wc_get_price_to_display(163)
+#1 /var/www/html/wp-includes/template.php(787): require('/var/www/html/w...')
+#2 /var/www/html/wp-includes/template.php(720): load_template('/var/www/html/w...', false, Array)
+#3 /var/www/html/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /var/www/html/wp-content/themes/understrap-child/functions.php(169): get_template_part('template-parts/...')
+#5 /var/www/html/wp-content/themes/understrap-child/front-page.php(22): get_flexible_content()
+#6 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#7 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#8 /var/www/html/index.php(17): require('/var/www/html/w...')
+#9 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1126
+
+2023-11-01T13:31:46+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::get_price() in /var/www/html/wp-content/plugins/woocommerce/includes/wc-product-functions.php:1126
+Stack trace:
+#0 /var/www/html/wp-content/themes/understrap-child/template-parts/special_offer.php(50): wc_get_price_to_display(Object(WP_Post))
+#1 /var/www/html/wp-includes/template.php(787): require('/var/www/html/w...')
+#2 /var/www/html/wp-includes/template.php(720): load_template('/var/www/html/w...', false, Array)
+#3 /var/www/html/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /var/www/html/wp-content/themes/understrap-child/functions.php(169): get_template_part('template-parts/...')
+#5 /var/www/html/wp-content/themes/understrap-child/front-page.php(22): get_flexible_content()
+#6 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#7 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#8 /var/www/html/index.php(17): require('/var/www/html/w...')
+#9 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 1126
+
+2023-11-01T15:07:24+00:00 CRITICAL Uncaught Error: Object of class DateTimeImmutable could not be converted to string in /var/www/html/wp-content/themes/understrap-child/template-parts/jewelry_design_blog.php:24
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(787): require()
+#1 /var/www/html/wp-includes/template.php(720): load_template('/var/www/html/w...', false, Array)
+#2 /var/www/html/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#3 /var/www/html/wp-content/themes/understrap-child/functions.php(169): get_template_part('template-parts/...')
+#4 /var/www/html/wp-content/themes/understrap-child/front-page.php(22): get_flexible_content()
+#5 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#6 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#7 /var/www/html/index.php(17): require('/var/www/html/w...')
+#8 {main}
+  thrown in /var/www/html/wp-content/themes/understrap-child/template-parts/jewelry_design_blog.php on line 24
+

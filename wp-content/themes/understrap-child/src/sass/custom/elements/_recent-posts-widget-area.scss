@@ -1,0 +1,43 @@
+.recent-posts-widget-area {
+
+  .wp-block-heading {
+    font-family: "Marcellus", serif;
+    font-size: 18px;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .wp-block-latest-posts {
+    margin-bottom: 0;
+
+    li {
+      border-bottom: 1px solid $light-grey;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      .wp-block-latest-posts__featured-image {
+        &.alignleft {
+          margin-right: 15px;
+        }
+      }
+
+      .wp-block-latest-posts__post-title {
+        color: $dark;
+        font-family: "Marcellus", serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-bottom: 11px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+}

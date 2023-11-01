@@ -1,0 +1,37 @@
+.hero-homepage {
+  margin-top: rem(-80px);
+  padding-top: rem(240px);
+  padding-bottom: rem(240px);
+  margin-bottom: rem(50px);
+
+  .hero-homepage-content {
+    max-width: 470px;
+  }
+
+  .suptitle {
+    color: $white;
+  }
+
+  .title {
+    color: $white;
+    font-size: rem(54px);
+    line-height: 3.75rem;
+    margin-bottom: rem(20px);
+  }
+
+  .description {
+    color: $white;
+  }
+
+  .links-wrapper {
+    margin-top: rem(35px);
+
+    a:first-child {
+      @include button-white;
+    }
+
+    a:nth-child(2) {
+      @include button-black-outline;
+    }
+  }
+}

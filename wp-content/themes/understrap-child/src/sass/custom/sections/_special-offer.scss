@@ -1,0 +1,90 @@
+.special-offer {
+  padding: rem(50px) 0;
+
+  .banner-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner-inner {
+      padding: rem(20px);
+      max-width: 300px;
+
+      .suptitle {
+        color: $dark;
+      }
+
+      .title {
+        color: $dark;
+        font-size: rem(54px);
+        line-height: 4.063rem;
+      }
+
+      .description {
+        color: $dark;
+        font-family: Marcellus,serif;
+        font-size: rem(18px);
+        text-transform: uppercase;
+      }
+
+      .links-wrapper {
+        gap: 10px;
+        margin-top: rem(30px);
+
+        a:first-child {
+          @include button-dark-light;
+        }
+
+        a:nth-child(2) {
+          @include button-light-grey;
+        }
+      }
+    }
+  }
+
+  .column-name {
+    color: $dark;
+    font-size: rem(18px);
+    font-family: Marcellus,serif;
+    margin-bottom: rem(20px);
+  }
+
+  .products-inner {
+    padding: 0 10px;
+
+    .product-wrapper {
+      display: flex;
+      padding-bottom: rem(10px);
+      margin-bottom: rem(15px);
+      border-bottom: 1px solid $light-grey;
+
+      img {
+        max-width: rem(65px);
+        margin-right: rem(17px);
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+
+        .product-name {
+          color: $dark;
+          font-family: Marcellus,serif;
+          font-size: rem(14px);
+          text-decoration: none;
+          margin-bottom: rem(10px);
+          line-height: 1rem;
+        }
+
+        .woocommerce-Price-amount {
+          color: $gold;
+          font-weight: 700;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}

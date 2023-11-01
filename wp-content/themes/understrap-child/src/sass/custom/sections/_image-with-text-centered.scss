@@ -1,0 +1,42 @@
+.image-with-text-centered {
+  padding: rem(50px) 0;
+
+  .image-block {
+
+  }
+
+  .column-centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .suptitle {
+    color: $gold;
+  }
+
+  .title {
+    font-size: rem(62px);
+  }
+
+  .subtitle {
+    font-size: rem(45px);
+    line-height: 3.438rem;
+  }
+
+  .links-wrapper {
+    justify-content: center;
+    gap: 10px;
+    margin-top: rem(30px);
+    
+    a:first-child {
+      @include button-dark-light;
+    }
+
+    a:nth-child(2) {
+      @include button-light-grey;
+    }
+  }
+}

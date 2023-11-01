@@ -1,0 +1,40 @@
+.contact-info-widget-area {
+  figure {
+    margin-bottom: 15px;
+
+    img {
+      margin-bottom: 0;
+    }
+  }
+
+  .description {
+    line-height: 1.25rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-info-widget {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.25rem;
+      color: $dark-light;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        margin-right: 5px;
+      }
+      
+      a {
+        color: $dark-light;
+        text-decoration: none;
+      }
+    }
+  }
+}

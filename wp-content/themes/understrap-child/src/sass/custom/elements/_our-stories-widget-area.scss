@@ -1,0 +1,32 @@
+.our-stories-widget-area {
+
+  .wp-block-heading {
+    font-family: "Marcellus", serif;
+    font-size: 18px;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $dark-light;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 1.25rem;
+      }
+    }
+  }
+}

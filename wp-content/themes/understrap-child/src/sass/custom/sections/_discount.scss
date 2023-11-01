@@ -1,0 +1,59 @@
+section {
+  &.discount {
+    padding: rem(50px) 0;
+
+    .title {
+      font-size: rem(62px);
+      line-height: 4.688rem;
+
+      span {
+        color: $gold;
+        font-size: rem(62px);
+        line-height: 4.688rem;
+      }
+    }
+
+    .subtitle {
+      font-size: rem(45px);
+      line-height: 3.438rem;
+    }
+
+    .description {
+      margin-bottom: rem(15px);
+    }
+
+    .list {
+      margin-bottom: rem(40px);
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+
+        img {
+          max-width: rem(20px);
+          margin-right: rem(10px);
+        }
+
+        span {
+          color: $dark-light;
+          font-size: 14px;
+          line-height: 1.563rem;
+        }
+      }
+    }
+
+    .links-wrapper {
+      gap: 10px;
+      margin-top: rem(40px);
+
+      a:first-child {
+        @include button-dark-light;
+      }
+
+      a:nth-child(2) {
+        @include button-light-grey;
+      }
+    }
+  }
+}
+

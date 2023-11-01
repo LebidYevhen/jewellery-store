@@ -1,0 +1,46 @@
+.image-with-text-left {
+  padding: rem(50px) 0;
+
+  .background-element {
+    position: relative;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .video-btn {
+      padding: 0;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .content-wrapper {
+    padding: rem(38.5px) 0 rem(38.5px) rem(100px);
+  }
+
+  .suptitle {
+    color: $gold;
+  }
+
+  .title {
+    font-size: rem(62px);
+    line-height: 4.688rem;
+  }
+
+  .subtitle {
+    font-size: rem(45px);
+    line-height: 3.438rem;
+    margin-bottom: rem(30px);
+  }
+
+  .links-wrapper {
+    a:first-child {
+      @include button-dark-light;
+    }
+  }
+}

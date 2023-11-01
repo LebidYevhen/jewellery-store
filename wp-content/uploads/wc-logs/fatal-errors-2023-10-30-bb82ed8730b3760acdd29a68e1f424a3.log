@@ -1,0 +1,24 @@
+2023-10-30T15:12:20+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_total() on null in /var/www/html/wp-content/themes/understrap-child/shortcodes/cart-shortcode.php:15
+Stack trace:
+#0 /var/www/html/wp-includes/shortcodes.php(433): woo_cart_but('', '', 'woo_cart_but')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /var/www/html/wp-includes/shortcodes.php(273): preg_replace_callback('/\\[(\\[?)(woo_ca...', 'do_shortcode_ta...', '[woo_cart_but]')
+#3 /var/www/html/wp-content/themes/understrap-child/functions.php(116): do_shortcode('[woo_cart_but]')
+#4 /var/www/html/wp-includes/class-wp-hook.php(310): wpgood_nav_search('<li itemscope="...', Object(stdClass))
+#5 /var/www/html/wp-includes/plugin.php(205): WP_Hook->apply_filters('<li itemscope="...', Array)
+#6 /var/www/html/wp-includes/nav-menu-template.php(267): apply_filters('wp_nav_menu_ite...', '<li itemscope="...', Object(stdClass))
+#7 /var/www/html/wp-content/themes/understrap/global-templates/navbar-collapse-bootstrap5.php(50): wp_nav_menu(Object(stdClass))
+#8 /var/www/html/wp-includes/template.php(787): require('/var/www/html/w...')
+#9 /var/www/html/wp-includes/template.php(720): load_template('/var/www/html/w...', false, Array)
+#10 /var/www/html/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#11 /var/www/html/wp-content/themes/understrap-child/header.php(36): get_template_part('global-template...', 'collapse-bootst...')
+#12 /var/www/html/wp-includes/template.php(785): require_once('/var/www/html/w...')
+#13 /var/www/html/wp-includes/template.php(720): load_template('/var/www/html/w...', true, Array)
+#14 /var/www/html/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#15 /var/www/html/wp-content/themes/understrap-child/front-page.php(16): get_header()
+#16 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#17 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#18 /var/www/html/index.php(17): require('/var/www/html/w...')
+#19 {main}
+  thrown in /var/www/html/wp-content/themes/understrap-child/shortcodes/cart-shortcode.php on line 15
+

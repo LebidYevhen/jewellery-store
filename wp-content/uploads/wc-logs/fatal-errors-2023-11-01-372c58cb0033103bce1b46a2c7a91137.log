@@ -1,0 +1,73 @@
+2023-11-01T16:36:13+00:00 CRITICAL Uncaught Error: Class "My_Widget" not found in /var/www/html/wp-includes/class-wp-widget-factory.php:62
+Stack trace:
+#0 /var/www/html/wp-includes/widgets.php(115): WP_Widget_Factory->register('My_Widget')
+#1 /var/www/html/wp-content/themes/understrap-child/functions.php(192): register_widget('My_Widget')
+#2 /var/www/html/wp-includes/class-wp-hook.php(310): js_register_widgets('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-includes/widgets.php(1858): do_action('widgets_init')
+#6 /var/www/html/wp-includes/class-wp-hook.php(310): wp_widgets_init('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(632): do_action('init')
+#10 /var/www/html/wp-config.php(37): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-includes/class-wp-widget-factory.php on line 62
+
+2023-11-01T16:38:14+00:00 CRITICAL Uncaught Error: Class "My_Widget" not found in /var/www/html/wp-includes/class-wp-widget-factory.php:62
+Stack trace:
+#0 /var/www/html/wp-includes/widgets.php(115): WP_Widget_Factory->register('My_Widget')
+#1 /var/www/html/wp-content/themes/understrap-child/functions.php(192): register_widget('My_Widget')
+#2 /var/www/html/wp-includes/class-wp-hook.php(310): js_register_widgets('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-includes/widgets.php(1858): do_action('widgets_init')
+#6 /var/www/html/wp-includes/class-wp-hook.php(310): wp_widgets_init('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(632): do_action('init')
+#10 /var/www/html/wp-config.php(37): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-includes/class-wp-widget-factory.php on line 62
+
+2023-11-01T16:39:52+00:00 CRITICAL Uncaught Error: Class "Contact_Info_Widget" not found in /var/www/html/wp-includes/class-wp-widget-factory.php:62
+Stack trace:
+#0 /var/www/html/wp-includes/widgets.php(115): WP_Widget_Factory->register('Contact_Info_Wi...')
+#1 /var/www/html/wp-content/themes/understrap-child/functions.php(191): register_widget('Contact_Info_Wi...')
+#2 /var/www/html/wp-includes/class-wp-hook.php(310): js_register_widgets('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-includes/widgets.php(1858): do_action('widgets_init')
+#6 /var/www/html/wp-includes/class-wp-hook.php(310): wp_widgets_init('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(632): do_action('init')
+#10 /var/www/html/wp-config.php(37): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-admin/admin-ajax.php(22): require_once('/var/www/html/w...')
+#13 {main}
+  thrown in /var/www/html/wp-includes/class-wp-widget-factory.php on line 62
+
+2023-11-01T16:39:52+00:00 CRITICAL Uncaught Error: Class "Contact_Info_Widget" not found in /var/www/html/wp-includes/class-wp-widget-factory.php:62
+Stack trace:
+#0 /var/www/html/wp-includes/widgets.php(115): WP_Widget_Factory->register('Contact_Info_Wi...')
+#1 /var/www/html/wp-content/themes/understrap-child/functions.php(191): register_widget('Contact_Info_Wi...')
+#2 /var/www/html/wp-includes/class-wp-hook.php(310): js_register_widgets('')
+#3 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#4 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-includes/widgets.php(1858): do_action('widgets_init')
+#6 /var/www/html/wp-includes/class-wp-hook.php(310): wp_widgets_init('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /var/www/html/wp-settings.php(632): do_action('init')
+#10 /var/www/html/wp-config.php(37): require_once('/var/www/html/w...')
+#11 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#12 /var/www/html/wp-admin/admin.php(34): require_once('/var/www/html/w...')
+#13 /var/www/html/wp-admin/widgets.php(10): require_once('/var/www/html/w...')
+#14 {main}
+  thrown in /var/www/html/wp-includes/class-wp-widget-factory.php on line 62
+
